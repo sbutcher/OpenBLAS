@@ -188,7 +188,7 @@ jobs:
                                  -D BUILD_WITHOUT_LAPACK=ON           \
                                  -D BUILD_WITHOUT_CBLAS=ON            \
                                  -D CMAKE_BUILD_TYPE=Release ../  &&  \
-            cmake --build ." > Dockerfile
+            cmake --build . -- -j 3" > Dockerfile
         docker build .
     - <<: *emulated-arm
       name: "Emulated ARMV6 with clang"
