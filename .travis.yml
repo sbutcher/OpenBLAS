@@ -187,7 +187,7 @@ jobs:
                                  -D BUILD_SHARED_LIBS=OFF              \
                                  -D BUILD_WITHOUT_LAPACK=ON           \
                                  -D BUILD_WITHOUT_CBLAS=ON            \
-                                 -D NUM_PARALLEL=4
+                                 -D NUM_PARALLEL=4                    \
                                  -D CMAKE_BUILD_TYPE=Release ../  &&  \
             cmake --build . -- -j 4" > Dockerfile
         docker build .
