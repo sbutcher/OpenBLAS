@@ -205,12 +205,13 @@ jobs:
 #        - IMAGE_ARCH=arm64 TARGET_ARCH=ARMV8 COMPILER=clang
         
   allow_failures:
+    - name: "Emulated ARMV6 with gcc"
     - name: "Emulated ARMV6 with clang"
-    - services: docker
-    - env: IMAGE_ARCH=arm32 TARGET_ARCH=ARMV6 COMPILER=gcc
-    - env: IMAGE_ARCH=arm32 TARGET_ARCH=ARMV6 COMPILER=clang
-    - env: IMAGE_ARCH=arm64 TARGET_ARCH=ARMV8 COMPILER=gcc
-    - env: IMAGE_ARCH=arm64 TARGET_ARCH=ARMV8 COMPILER=clang
+#    - services: docker
+#    - env: IMAGE_ARCH=arm32 TARGET_ARCH=ARMV6 COMPILER=gcc
+#    - env: IMAGE_ARCH=arm32 TARGET_ARCH=ARMV6 COMPILER=clang
+#    - env: IMAGE_ARCH=arm64 TARGET_ARCH=ARMV8 COMPILER=gcc
+#    - env: IMAGE_ARCH=arm64 TARGET_ARCH=ARMV8 COMPILER=clang
 
 # whitelist
 branches:
